@@ -26,7 +26,7 @@ noOfCycles = 100
 
 
 #flux
-j = np.zeros(n+1,dtype=int)
+j = np.zeros(n+1,dtype=float)
 
 
 # for diff values of m
@@ -39,7 +39,7 @@ for g in range(n+1):
 
 
     #probability of occupying next site
-    q = 1
+    q = 0.7
     #ji is array for value of j for diff. configs with same m[g]
     ji = np.zeros(ncr(n,m[g]),dtype=int)
 
@@ -117,7 +117,7 @@ for g in range(n+1):
                         sitesOccupied[r] = z
                         r+=1
     j[g] = np.mean(ji)
-
+    print(g)
 
 #plot of j vs density
 plt.scatter(m/n,j/noOfCycles,marker='o')

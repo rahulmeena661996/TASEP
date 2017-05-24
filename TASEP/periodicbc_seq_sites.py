@@ -26,7 +26,7 @@ q=0.5
 
 #flux
 
-j = np.zeros(n+1,dtype=int)
+j = np.zeros(n+1,dtype=float)
 
 #noofsitesOccupied = 0
 #site = np.zeros(n,dtype=int)

@@ -14,14 +14,14 @@ def ncr(n, r):
     return numer//denom
 
 #no. of sites
-n = 100
+n = 10
 
 #no. of particles
 m = np.zeros(n+1,dtype=int)
 for i in range(n+1):
     m[i] = i
 
-noOfCycles=20
+noOfCycles=10
 
 #flux
 j = np.zeros(n+1,dtype=int)
@@ -82,6 +82,7 @@ for g in range(n+1):
                         sitesOccupied[r] = z
                         r+=1
     j[g] = np.mean(ji)
+    print(g,"  g")
 
 
 #plot of j vs density
